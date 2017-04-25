@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet id="create-standalone-table" author="balazskovacs">
+		<sqlFile path="src/main/resources/liquibase/initial-scripts/ddl/standalone-tables.sql" encoding="UTF-8" dbms="mysql" endDelimiter="#"/>
+	</changeSet>
+	
+	<changeSet id="create-user-tables" author="balazskovacs">
+		<sqlFile path="src/main/resources/liquibase/initial-scripts/ddl/user-tables.sql" encoding="UTF-8" dbms="mysql" endDelimiter="#"/>
+	</changeSet>
+	
+	<changeSet id="create-login-tables" author="balazskovacs">
+		<sqlFile path="src/main/resources/liquibase/initial-scripts/ddl/login-table.sql" encoding="UTF-8" dbms="mysql" endDelimiter="#"/>
+	</changeSet>
+</databaseChangeLog>
