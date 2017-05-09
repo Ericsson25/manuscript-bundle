@@ -33,8 +33,9 @@
 						<artifactId>liquibase-maven-plugin</artifactId>
 						<version>${liquibase-maven-plugin.version}</version>
 						<configuration>
-							<logging>debug</logging>
-							<changeLogFile>${basedir}/src/main/resources/liquibase/master.xml</changeLogFile>
+							<logging>info</logging>
+							<verbose>true</verbose>
+							<changeLogFile>${basedir}/src/main/resources/liquibase/master-init.xml</changeLogFile>
 							<driver>com.mysql.jdbc.Driver</driver>
 							<url>${url}</url>
 							<username>${username}</username>
