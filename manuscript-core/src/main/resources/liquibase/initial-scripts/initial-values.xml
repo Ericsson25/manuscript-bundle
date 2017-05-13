@@ -21,7 +21,9 @@
 		<insert tableName="ROLE">
 			<column name="ROLE" value="ADMIN_ROLE" />
 		</insert>
+	</changeSet>
 
+	<changeSet id="init-academicdisciplines-table" author="balazskovacs">
 		<insert tableName="ACADEMIC_DISCIPLINES">
 			<column name="ACADEMIC_DISCIPLINES_ID" value="01" />
 			<column name="ACADEMIC_DISCIPLINES_NAME" value="Architecture" />
@@ -4912,11 +4914,27 @@
 		</insert>
 	</changeSet>
 
-	<!-- <changeSet id="init-standalone-tables" author="balazskovacs"> -->
-	<!-- <sqlFile path="src/main/resources/liquibase/initial-scripts/dml/standalone-tables-init.sql" encoding="UTF-8" dbms="mysql"/> -->
-	<!-- </changeSet> -->
-
-	<!-- <changeSet id="init-dummy-data" author="balazskovacs"> -->
-	<!-- <sqlFile path="src/main/resources/liquibase/initial-scripts/dml/dummy-test-data.sql" encoding="UTF-8" dbms="mysql"/> -->
-	<!-- </changeSet> -->
+	<changeSet id="init-sbmstatus-table" author="balazskovacs">
+		<insert tableName="SBM_STATUS">
+			<column name="STATUS" value="SUBMITTED" />
+		</insert>
+		<insert tableName="SBM_STATUS">
+			<column name="STATUS" value="ASSIGN_TO_REVIEWER" />
+		</insert>
+		<insert tableName="SBM_STATUS">
+			<column name="STATUS" value="UNDER_REVIEW" />
+		</insert>
+		<insert tableName="SBM_STATUS">
+			<column name="STATUS" value="UNDER_VERDICT" />
+		</insert>
+		<insert tableName="SBM_STATUS">
+			<column name="STATUS" value="NEED_PRECISION" />
+		</insert>
+		<insert tableName="SBM_STATUS">
+			<column name="STATUS" value="ACCEPTED" />
+		</insert>
+		<insert tableName="SBM_STATUS">
+			<column name="STATUS" value="REJECTED" />
+		</insert>
+	</changeSet>
 </databaseChangeLog>
