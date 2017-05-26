@@ -13,12 +13,12 @@ import org.springframework.context.annotation.AdviceMode;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import manuscript.module.user.management.registration.UserRegistrationDao;
+import manuscript.module.user.management.academic.disciplines.AcademicDisciplinesDao;
 
 @Configuration
 @EnableCaching(mode = AdviceMode.PROXY, proxyTargetClass = true)
 public class ManuscriptCacheConfig extends CachingConfigurerSupport {
-	
+
 	@Bean
 	@Override
 	public CacheManager cacheManager() {
@@ -29,12 +29,17 @@ public class ManuscriptCacheConfig extends CachingConfigurerSupport {
 
 	private List<Cache> collectCaches() {
 		List<Cache> caches = new ArrayList<Cache>();
-		caches.add(academicDisciplinesCache());
+		caches.add(getDisciplinesAsMapCache());
+		caches.add(getDisciplinesAsList());
 
 		return caches;
 	}
 
-	private ConcurrentMapCache academicDisciplinesCache() {
-		return new ConcurrentMapCache(UserRegistrationDao.ACADEMIC_DISCIPLINES_CACHE);
+	private ConcurrentMapCache getDisciplinesAsMapCache() {
+		return new ConcurrentMapCache(AcademicDisciplinesDao.GET_DISICPLINES_AS_MAP_CACHE);
+	}
+
+	private ConcurrentMapCache getDisciplinesAsList() {
+		return new ConcurrentMapCache(AcademicDisciplinesDao.GET_DISICPLINES_AS_LIST_CACHE);
 	}
 }

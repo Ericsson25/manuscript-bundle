@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet id="create-table-sbm-reviewer-reviewes" author="balazskovacs">
+		<createTable tableName="SBM_REVIEWER_REVIEWES">
+			<column name="ID" type="INT(5)" autoIncrement="true" startWith="1" incrementBy="1">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="REVIEWER_ID" type="INT(5)">
+				<constraints foreignKeyName="fk_sbm_reviewer_reviewes_reviewer_id" referencedTableName="SBM_REVIEWERS" referencedColumnNames="REVIEWER_ID" />
+			</column>
+		</createTable>
+	</changeSet>
+</databaseChangeLog>

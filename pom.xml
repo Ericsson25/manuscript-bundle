@@ -23,89 +23,59 @@
 	</modules>
 
 	<properties>
-		<user-management.version>0.0.1-SNAPSHOT</user-management.version>
-		<manuscript-management.version>0.0.1-SNAPSHOT</manuscript-management.version>
-		<manuscript-security.version>0.0.1-SNAPSHOT</manuscript-security.version>
+		<!-- START user management -->
+		<user-management-general.version>0.0.1-SNAPSHOT</user-management-general.version>
+		<user-management-service.version>0.0.1-SNAPSHOT</user-management-service.version>
+		<user-management-dao-mysql.version>0.0.1-SNAPSHOT</user-management-dao-mysql.version>
+		<!-- END user management -->
+
+		<!-- START manuscript security -->
+		<manuscript-security-general.version>0.0.1-SNAPSHOT</manuscript-security-general.version>
+		<manuscript-security-dao-mysql.version>0.0.1-SNAPSHOT</manuscript-security-dao-mysql.version>
+		<manuscript-security-service.version>0.0.1-SNAPSHOT</manuscript-security-service.version>
+		<!-- END manuscript security -->
 	</properties>
 
 	<dependencyManagement>
+
 		<dependencies>
-			<!-- user-management module -->
+			<!-- START user management -->
 			<dependency>
 				<groupId>manuscript.module.user.management</groupId>
-				<artifactId>user-management-controller</artifactId>
-				<version>${user-management.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>manuscript.module.user.management</groupId>
-				<artifactId>user-management-model</artifactId>
-				<version>${user-management.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>manuscript.module.user.management</groupId>
-				<artifactId>user-management-persist</artifactId>
-				<version>${user-management.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>manuscript.module.user.management</groupId>
-				<artifactId>user-management-persist-mysql</artifactId>
-				<version>${user-management.version}</version>
+				<artifactId>user-management-general</artifactId>
+				<version>${user-management-general.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>manuscript.module.user.management</groupId>
 				<artifactId>user-management-service</artifactId>
-				<version>${user-management.version}</version>
+				<version>${user-management-service.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>manuscript.module.user.management</groupId>
-				<artifactId>user-management-service-impl</artifactId>
-				<version>${user-management.version}</version>
+				<artifactId>user-management-dao-mysql</artifactId>
+				<version>${user-management-dao-mysql.version}</version>
 			</dependency>
+			<!-- END user management -->
 
-			<!-- manuscript-management module -->
-
-			<dependency>
-				<groupId>manuscript.module.manuscript.management</groupId>
-				<artifactId>manuscript-management-controller</artifactId>
-				<version>${manuscript-management.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>manuscript.module.manuscript.management</groupId>
-				<artifactId>manuscript-management-model</artifactId>
-				<version>${manuscript-management.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>manuscript.module.manuscript.management</groupId>
-				<artifactId>manuscript-management-persist</artifactId>
-				<version>${manuscript-management.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>manuscript.module.manuscript.management</groupId>
-				<artifactId>manuscript-management-persist-mysql</artifactId>
-				<version>${manuscript-management.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>manuscript.module.manuscript.management</groupId>
-				<artifactId>manuscript-management-service</artifactId>
-				<version>${manuscript-management.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>manuscript.module.manuscript.management</groupId>
-				<artifactId>manuscript-management-service-impl</artifactId>
-				<version>${manuscript-management.version}</version>
-			</dependency>
-
+			<!-- START manuscript security -->
 			<dependency>
 				<groupId>manuscript.framework.security</groupId>
-				<artifactId>manuscript-security-model</artifactId>
-				<version>${manuscript-security.version}</version>
+				<artifactId>manuscript-security-general</artifactId>
+				<version>${manuscript-security-general.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>manuscript.framework.security</groupId>
+				<artifactId>manuscript-security-dao-mysql</artifactId>
+				<version>${manuscript-security-dao-mysql.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>manuscript.framework.security</groupId>
 				<artifactId>manuscript-security-service</artifactId>
-				<version>${manuscript-security.version}</version>
+				<version>${manuscript-security-service.version}</version>
 			</dependency>
+			<!-- END manuscript security -->
 		</dependencies>
+
 	</dependencyManagement>
 
 	<dependencies>
@@ -113,42 +83,34 @@
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>jcl-over-slf4j</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis-spring</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-core</artifactId>
@@ -165,13 +127,11 @@
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-crypto</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<scope>compile</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>ro.isdc.wro4j</groupId>
 			<artifactId>wro4j-core</artifactId>
@@ -199,67 +159,6 @@
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>bootstrap</artifactId>
-		</dependency>
-		
-		<dependency>
-			<groupId>manuscript.module.user.management</groupId>
-			<artifactId>user-management-controller</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>manuscript.module.user.management</groupId>
-			<artifactId>user-management-model</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>manuscript.module.user.management</groupId>
-			<artifactId>user-management-persist</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>manuscript.module.user.management</groupId>
-			<artifactId>user-management-persist-mysql</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>manuscript.module.user.management</groupId>
-			<artifactId>user-management-service</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>manuscript.module.user.management</groupId>
-			<artifactId>user-management-service-impl</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>manuscript.module.manuscript.management</groupId>
-			<artifactId>manuscript-management-controller</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>manuscript.module.manuscript.management</groupId>
-			<artifactId>manuscript-management-model</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>manuscript.module.manuscript.management</groupId>
-			<artifactId>manuscript-management-persist</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>manuscript.module.manuscript.management</groupId>
-			<artifactId>manuscript-management-persist-mysql</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>manuscript.module.manuscript.management</groupId>
-			<artifactId>manuscript-management-service</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>manuscript.module.manuscript.management</groupId>
-			<artifactId>manuscript-management-service-impl</artifactId>
-		</dependency>
-
-
-
-		<dependency>
-			<groupId>manuscript.framework.security</groupId>
-			<artifactId>manuscript-security-model</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>manuscript.framework.security</groupId>
-			<artifactId>manuscript-security-service</artifactId>
 		</dependency>
 	</dependencies>
 </project>

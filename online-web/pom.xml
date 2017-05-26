@@ -19,6 +19,29 @@
 	<properties></properties>
 
 	<dependencies>
-		
+		<dependency>
+			<groupId>manuscript.module.user.management</groupId>
+			<artifactId>user-management-general</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>manuscript.module.user.management</groupId>
+			<artifactId>user-management-service</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>manuscript.module.user.management</groupId>
+			<artifactId>user-management-dao-mysql</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>manuscript.framework.security</groupId>
+			<artifactId>manuscript-security-service</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>manuscript.framework.security</groupId>
+			<artifactId>manuscript-security-general</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>manuscript.framework.security</groupId>
+			<artifactId>manuscript-security-dao-mysql</artifactId>
+		</dependency>
 	</dependencies>
 </project>

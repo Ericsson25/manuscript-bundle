@@ -20,6 +20,14 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>manuscript.framework.security</groupId>
+			<artifactId>manuscript-security-general</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>manuscript.module.user.management</groupId>
+			<artifactId>user-management-general</artifactId>
+		</dependency>
 	</dependencies>
 
 	<profiles>
@@ -39,6 +47,39 @@
 							<url>${url}</url>
 							<username>${username}</username>
 							<password>${password}</password>
+						</configuration>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>dropAll</goal>
+									<!-- <goal>clearCheckSums</goal> -->
+									<goal>update</goal>
+<!-- 									<goal>updateSQL</goal> -->
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		
+		<profile>
+			<id>mysqldeploytest</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.liquibase</groupId>
+						<artifactId>liquibase-maven-plugin</artifactId>
+						<version>${liquibase-maven-plugin.version}</version>
+						<configuration>
+							<logging>info</logging>
+							<verbose>true</verbose>
+							<changeLogFile>${basedir}/src/main/resources/liquibase/master-init.xml</changeLogFile>
+							<driver>com.mysql.jdbc.Driver</driver>
+							<url>${url.test}</url>
+							<username>${username.test}</username>
+							<password>${password.test}</password>
 						</configuration>
 						<executions>
 							<execution>

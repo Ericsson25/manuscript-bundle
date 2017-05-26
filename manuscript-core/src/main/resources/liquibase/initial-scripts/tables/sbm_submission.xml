@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet id="create-table-sbm-submission" author="balazskovacs">
+		<createTable tableName="SBM_SUBMISSION">
+			<column name="SUBMISSION_ID" type="VARCHAR(60)">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="TITLE" type="VARCHAR(100)" />
+			<column name="SUBMITTER" type="INT(5)">
+				<constraints foreignKeyName="fk_sbm_submission_submitter" referencedTableName="USR_USER" referencedColumnNames="USER_ID" />
+			</column>
+			<column name="EDITOR" type="INT(5)">
+				<constraints foreignKeyName="fk_sbm_submission_editor" referencedTableName="USR_USER" referencedColumnNames="USER_ID" />
+			</column>
+			<column name="ABSTRACT" type="TEXT" />
+			<column name="KEYWORDS" type="VARCHAR(255)" />
+			<column name="CREATION_DATE" type="TIMESTAMP" defaultValueDate="CURRENT_TIMESTAMP" />
+			<column name="LAST_MODIFY_DATE" type="TIMESTAMP" defaultValueDate="CURRENT_TIMESTAMP" />
+			<column name="CLOSED" type="BOOLEAN" defaultValueBoolean="false" />
+			<column name="STATUS" type="TINYINT">
+				<constraints foreignKeyName="fk_sbm_submission_status" referencedTableName="SBM_STATUS" referencedColumnNames="ID" />
+			</column>
+		</createTable>
+	</changeSet>
+</databaseChangeLog>
