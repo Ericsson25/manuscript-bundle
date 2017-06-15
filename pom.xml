@@ -34,6 +34,12 @@
 		<manuscript-security-dao-mysql.version>0.0.1-SNAPSHOT</manuscript-security-dao-mysql.version>
 		<manuscript-security-service.version>0.0.1-SNAPSHOT</manuscript-security-service.version>
 		<!-- END manuscript security -->
+
+		<!-- START manuscript management -->
+		<manuscript-management-general.version>0.0.1-SNAPSHOT</manuscript-management-general.version>
+		<manuscript-management-dao-mysql.version>0.0.1-SNAPSHOT</manuscript-management-dao-mysql.version>
+		<manuscript-management-service.version>0.0.1-SNAPSHOT</manuscript-management-service.version>
+		<!-- END manuscript management -->
 	</properties>
 
 	<dependencyManagement>
@@ -74,6 +80,24 @@
 				<version>${manuscript-security-service.version}</version>
 			</dependency>
 			<!-- END manuscript security -->
+
+			<!-- START manuscript management -->
+			<dependency>
+				<groupId>manuscript.module.manuscript.management</groupId>
+				<artifactId>manuscript-management-general</artifactId>
+				<version>${manuscript-management-general.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>manuscript.module.manuscript.management</groupId>
+				<artifactId>manuscript-management-dao-mysql</artifactId>
+				<version>${manuscript-management-general.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>manuscript.module.manuscript.management</groupId>
+				<artifactId>manuscript-management-service</artifactId>
+				<version>${manuscript-management-general.version}</version>
+			</dependency>
+			<!-- END manuscript management -->
 		</dependencies>
 
 	</dependencyManagement>

@@ -43,5 +43,17 @@
 			<groupId>manuscript.framework.security</groupId>
 			<artifactId>manuscript-security-dao-mysql</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>manuscript.module.manuscript.management</groupId>
+			<artifactId>manuscript-management-dao-mysql</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>manuscript.module.manuscript.management</groupId>
+			<artifactId>manuscript-management-general</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>manuscript.module.manuscript.management</groupId>
+			<artifactId>manuscript-management-service</artifactId>
+		</dependency>
 	</dependencies>
 </project>
