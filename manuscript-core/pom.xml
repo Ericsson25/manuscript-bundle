@@ -28,6 +28,10 @@
 			<groupId>manuscript.module.user.management</groupId>
 			<artifactId>user-management-general</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>manuscript.module.manuscript.management</groupId>
+			<artifactId>manuscript-management-general</artifactId>
+		</dependency>
 	</dependencies>
 
 	<profiles>
@@ -55,7 +59,7 @@
 									<goal>dropAll</goal>
 									<!-- <goal>clearCheckSums</goal> -->
 									<goal>update</goal>
-<!-- 									<goal>updateSQL</goal> -->
+									<!-- <goal>updateSQL</goal> -->
 								</goals>
 							</execution>
 						</executions>
@@ -63,7 +67,7 @@
 				</plugins>
 			</build>
 		</profile>
-		
+
 		<profile>
 			<id>mysqldeploytest</id>
 			<build>
@@ -88,7 +92,7 @@
 									<goal>dropAll</goal>
 									<!-- <goal>clearCheckSums</goal> -->
 									<goal>update</goal>
-<!-- 									<goal>updateSQL</goal> -->
+									<!-- <goal>updateSQL</goal> -->
 								</goals>
 							</execution>
 						</executions>
