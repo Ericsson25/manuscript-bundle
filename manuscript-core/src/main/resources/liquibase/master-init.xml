@@ -9,4 +9,6 @@
 	<!-- user-management -->
 	<include file="liquibase/user-management-master.xml" />
 
+	<!-- manuscript-management -->
+	<include file="liquibase/manuscript-management-master.xml" />
 </databaseChangeLog>
