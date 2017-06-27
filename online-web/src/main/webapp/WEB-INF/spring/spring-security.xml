@@ -13,7 +13,7 @@
 			<security:filter-chain pattern="/**/loginTemplate.html" filters="none" />
 			<security:filter-chain pattern="/**/registrationTemplate.html" filters="none" />
 			<security:filter-chain pattern="/**/*.jpg" filters="none" />
-<!-- 			Because of angularJS -->
+			<!-- Because of angularJS -->
 			<security:filter-chain pattern="/wro/*.js" filters="none" />
 			<security:filter-chain pattern="/wro/*.min.js.map" filters="none" />
 			<security:filter-chain pattern="/wro/*.css" filters="none" />
@@ -21,7 +21,7 @@
 			<security:filter-chain pattern="/**/*.woff2" filters="none" />
 			<security:filter-chain pattern="/**/*.woff" filters="none" />
 			<security:filter-chain pattern="/**/*.ttf" filters="none" />
-			
+
 			<security:filter-chain pattern="/registration/preload" filters="none" />
 			<security:filter-chain pattern="/registration/create" filters="none" />
 			<security:filter-chain pattern="/**"
@@ -30,8 +30,8 @@
 	</bean>
 
 	<!-- <bean id="requestContextFilter" class="org.springframework.web.filter.RequestContextFilter" /> -->
-	
-	<bean id="sessionInvalidation" class="manuscript.system.security.config.SessionInvalidation"/>
+
+	<bean id="sessionInvalidation" class="manuscript.system.security.config.SessionInvalidation" />
 
 
 	<bean id="securityContextRepository" class="org.springframework.security.web.context.HttpSessionSecurityContextRepository" />
@@ -39,8 +39,8 @@
 	<bean id="securityContextFilter" class="org.springframework.security.web.context.SecurityContextPersistenceFilter">
 		<constructor-arg name="repo" ref="securityContextRepository" />
 	</bean>
-	
-	<bean id="customSimpleUrlLogoutSuccessHandler" class="manuscript.system.security.config.CustomSimpleUrlLogoutSuccessHandler"/>
+
+	<bean id="customSimpleUrlLogoutSuccessHandler" class="manuscript.system.security.config.CustomSimpleUrlLogoutSuccessHandler" />
 
 	<bean id="logoutFilter" class="org.springframework.security.web.authentication.logout.LogoutFilter">
 		<constructor-arg name="logoutSuccessHandler" ref="customSimpleUrlLogoutSuccessHandler" />
@@ -101,7 +101,7 @@
 
 	<bean id="filterSecurityInterceptor" class="org.springframework.security.web.access.intercept.FilterSecurityInterceptor">
 		<property name="authenticationManager" ref="authenticationManager" />
-		<property name="accessDecisionManager" ref="accessDecisionManager"></property>
+		<property name="accessDecisionManager" ref="accessDecisionManager" />
 		<property name="securityMetadataSource">
 			<security:filter-security-metadata-source use-expressions="true">
 				<security:intercept-url pattern="/**" access="isFullyAuthenticated()" />
@@ -122,7 +122,7 @@
 	<bean id="roleVoter" class="org.springframework.security.access.vote.RoleVoter" />
 	<bean id="authenticatedVoter" class="org.springframework.security.access.vote.AuthenticatedVoter" />
 	<bean id="expressionVoter" class="org.springframework.security.web.access.expression.WebExpressionVoter" />
-	
+
 	<bean id="accessDeniedHandler" class="manuscript.system.security.config.CustomerAccessDeniedHandlerImpl">
 		<property name="defaultErrorUrl" value="/" />
 	</bean>
