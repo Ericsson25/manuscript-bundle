@@ -3,7 +3,7 @@
 
 	<group name="thirdpartyjs">
 		<js>classpath:META-INF/resources/webjars/jquery/1.11.1/jquery.min.js</js>
-		<js>classpath:META-INF/resources/webjars/angularjs/1.6.1/angular.min.js</js>
+		<js>classpath:META-INF/resources/webjars/angularjs/1.6.1/angular.js</js>
 		<js>classpath:META-INF/resources/webjars/angularjs/1.6.1/angular-route.min.js</js>
 		<js>classpath:META-INF/resources/webjars/angularjs/1.6.1/angular-animate.min.js</js>
 		<js>classpath:META-INF/resources/webjars/angularjs/1.6.1/angular-aria.min.js</js>
@@ -14,9 +14,14 @@
 	</group>
 
 	<group name="loginjs">
-		<js>/resources/App.js</js>
-		<js>/resources/registration/registrationController.js</js>
-		<js>/resources/login/loginController.js</js>
+		<js>/resources/login/module.js</js>
+		<js>/resources/login/LoginService.js</js>
+		<js>/resources/login/LoginController.js</js>
+		
+		<js>/resources/loginApp.js</js>		
+
+
+		<!--<js>/resources/registration/registrationController.js</js>-->
 	</group>
 
 	<group name="thirdpartyjscss">

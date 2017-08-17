@@ -1,27 +1,17 @@
-app.controller('loginController', ['$scope', '$http', '$location',
-	function ($scope, $http, $location) {
+angular.module('manuscript.login').controller('LoginController', LoginController); 
 
-		$scope.credential = {
-			username: '',
-			password: ''
-		}
+LoginController.$inject = ['$scope', 'LoginService'];
 
-		$scope.authenticate = function () {
-			var data = "username=" + $scope.credential.username + "&password=" + $scope.credential.password + "&submit=Login";
+function LoginController($scope, LoginService){
 
-			$http({
-				method: 'POST',
-				url: 'j_spring_security_check',
-				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-				data: data
-			}).then(function successCallback(response) {
-				window.location = 'index.html';
-				console.log("success: ", response);
-			}, function errorCallback(response) {
-				console.log("error: ", response);
-				$scope.errorMessage = response.data.errorMessage;
-				$scope.credential.username = '';
-				$scope.credential.password = '';
-			})
-		}
-	}]);
+	var vm = this;
+
+	vm.authenticate = authenticate;
+
+	function authenticate(username, password){
+		var credentials = "username=" + username + "&password=" + password + "&submit=Login";
+
+		LoginService.login(credentials);
+	}
+
+};
