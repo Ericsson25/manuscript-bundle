@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="loginApp">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Manuscript</title>
+	<link rel="stylesheet" href="wro/thirdparty-css.css" />
+	<link rel="stylesheet" href="wro/login-css.css" />
+	<link rel="stylesheet" href="wro/frontend-core-style.css" />
+
+	<script src="wro/thirdparty-js.js" type="text/javascript"></script>
+	<script src="wro/frontend-core.js" type="text/javascript"></script>
+	<script src="wro/login-js.js" type="text/javascript"></script>
+
+</head>
+
+<body ng-cloak>
+
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="collapse navbar-collapse" id="important-id-for-collapsing">
+				<ul class="nav navbar-nav">
+					<li><a href="#/">Login</a></li>
+					<li><a href="#/registration">Registration</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div ng-view></div>
+	</div>
+</body>
+
+</html>

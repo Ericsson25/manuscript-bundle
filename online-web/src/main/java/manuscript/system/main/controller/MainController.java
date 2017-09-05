@@ -20,7 +20,7 @@ public class MainController {
 	@RequestMapping(path = "/")
 	public String getLogin(HttpServletResponse response) {
 		response.setHeader("Cache-Control", "no-cache, no-store, max-age=0, must-revalidate");
-		return "static/login.html";
+		return "resources/login.html";
 	}
 
 	@RequestMapping(path = "/index.html")
@@ -31,6 +31,6 @@ public class MainController {
 
 	@RequestMapping(path = "/login.html")
 	public String getLoginFromSuccesLogout() {
-		return "static/login.html";
+		return "resources/login.html";
 	}
 }

@@ -170,19 +170,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.webjars</groupId>
-			<artifactId>angularjs</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.webjars</groupId>
 			<artifactId>angular-ui-bootstrap</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>angular-material</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>bootstrap</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>

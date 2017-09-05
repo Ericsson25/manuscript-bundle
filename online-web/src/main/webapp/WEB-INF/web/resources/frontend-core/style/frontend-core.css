@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.error-message {
+	word-break: break-word;
+}
+
+.forminput-label {
+	font-size: 10px;
+}

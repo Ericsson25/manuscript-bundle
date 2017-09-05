@@ -1,0 +1,16 @@
+<div>
+	<form class="form-login" id="form-login">
+		<div class="login-title">
+			<h1>Login</h1>
+		</div>
+
+		<forminput label="User name" type="text" input="vm.credentials.username"></forminput>
+		<forminput label="Password" type="password" input="vm.credentials.password"></forminput>
+
+		<div class="form-group">
+			<button class="btn btn-primary btn-block" type="submit" ng-click="vm.authenticate()">Login</button>
+		</div>
+
+		<messages message="vm.messages" class="custom-error-font-size"></messages>
+	</form>
+</div>

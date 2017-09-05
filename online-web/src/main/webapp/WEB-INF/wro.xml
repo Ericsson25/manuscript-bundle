@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <groups xmlns="http://www.isdc.ro/wro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.isdc.ro/wro wro.xsd">
 
-	<group name="thirdpartyjs">
-		<js>classpath:META-INF/resources/webjars/jquery/1.11.1/jquery.min.js</js>
-		<js>classpath:META-INF/resources/webjars/angularjs/1.6.1/angular.js</js>
-		<js>classpath:META-INF/resources/webjars/angularjs/1.6.1/angular-route.min.js</js>
-		<js>classpath:META-INF/resources/webjars/angularjs/1.6.1/angular-animate.min.js</js>
-		<js>classpath:META-INF/resources/webjars/angularjs/1.6.1/angular-aria.min.js</js>
-		<js>classpath:META-INF/resources/webjars/angularjs/1.6.1/angular-messages.min.js</js>
-		<!-- <js>classpath:META-INF/resources/webjars/angular-material/1.1.1/angular-material.min.js</js> -->
-		<js>classpath:META-INF/resources/webjars/bootstrap/3.3.7/js/bootstrap.min.js</js>
-		<js>classpath:META-INF/resources/webjars/angular-ui-bootstrap/2.2.0/ui-bootstrap-tpls.min.js</js>
+	<group name="thirdparty-js">
+		<js>classpath:META-INF/resources/webjars/underscorejs/1.8.3/underscore.js</js>
+		<js>classpath:META-INF/resources/webjars/angularjs/1.6.4/angular.js</js>
+		<js>classpath:META-INF/resources/webjars/angularjs/1.6.4/angular-route.min.js</js>
+		<js>classpath:META-INF/resources/webjars/angular-ui-bootstrap/2.2.0/ui-bootstrap-tpls.js</js>
+	</group>
+	
+	<group name="frontend-core">
+		<js>/resources/frontend-core/module.js</js>
+		<js>/resources/frontend-core/messages/module.js</js>
+		<js>/resources/frontend-core/messages/messagesComponent.js</js>
+		
+		<js>/resources/frontend-core/forminput/module.js</js>
+		<js>/resources/frontend-core/forminput/forminputComponent.js</js>
+	</group>
+	
+	<group name="frontend-core-style">
+		<css>/resources/frontend-core/style/frontend-core.css</css>
 	</group>
 
-	<group name="loginjs">
+	<group name="login-js">
+			
 		<js>/resources/login/module.js</js>
 		<js>/resources/login/LoginService.js</js>
 		<js>/resources/login/LoginController.js</js>
-		
-		<js>/resources/loginApp.js</js>		
 
-
-		<!--<js>/resources/registration/registrationController.js</js>-->
+		<js>/resources/loginApp.js</js>
 	</group>
 
-	<group name="thirdpartyjscss">
-		<!-- <css>classpath:META-INF/resources/webjars/angular-material/1.1.1/angular-material.min.css</css> -->
-		<css>classpath:/META-INF/resources/webjars/bootstrap/3.3.7/css/bootstrap.min.css</css>
+	<group name="thirdparty-css">
+		<css>classpath:META-INF/resources/webjars/bootstrap/3.3.6/css/bootstrap.css</css>
 	</group>
 
-	<group name="logincss">
+	<group name="login-css">
 		<css>/resources/css/styles.css</css>
-<!-- 		<css>/resources/pic.jpg</css> -->
-	</group>
-	
-	<group name="indexpreload">
-		<js>/resources/indexApp.js</js>
-		<js>/resources/management/personalDataSettingsController.js</js>
-		<js>/resources/submission/submissionController.js</js>
+		<css>/resources/pic.jpg</css>
+		<css>/resources/anastasia-zhenina-65700-background.jpg</css>
 	</group>
 </groups>  

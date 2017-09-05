@@ -1,0 +1,58 @@
+@CHARSET "UTF-8";
+
+body {
+	background-image: url("/online-web/resources/pictures/pic.jpg");
+	background-repeat: no-repeat;
+/* 	background-size: cover; */
+}
+
+.navbar-default {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: whitesmoke;
+	font-size: 20px;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	color: whitesmoke;
+	font-size: 25px;
+	background-color: transparent;
+}
+
+.form-login {
+	max-width: 350px;
+	margin: 200px auto;
+}
+
+.form-control {
+	height: 40px;
+	/* 	margin-top: 5px; */
+	/* 	margin-bottom: 5px; */
+}
+
+form.registration-form {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+div.registration-title, div.login-title {
+	text-align: center;
+	color: whitesmoke;
+	font-weight:500;
+}
+
+.form-group {
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+#academicDisciplonesBtn {
+	height: 40px;
+}
+
+.custom-error-font-size {
+	font-size: 20px;
+}

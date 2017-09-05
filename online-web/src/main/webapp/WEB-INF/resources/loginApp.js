@@ -1,6 +1,7 @@
 angular.module('loginApp', [
     'ngRoute',
-    'manuscript.login'
+    'manuscript.login',
+    'manuscript.registration'
 ]).config(['$routeProvider', '$locationProvider',
     function ($routeProvider, $locationProvider) {
         $locationProvider.hashPrefix('');

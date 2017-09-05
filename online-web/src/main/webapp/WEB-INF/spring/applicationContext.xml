@@ -46,8 +46,8 @@
 
 	<!-- Resources mapping -->
 	<mvc:resources mapping="/webjars/**" location="/webjars/" />
-	<mvc:resources mapping="/static/**" location="/WEB-INF/static/" />
-	<mvc:resources mapping="/resources/**" location="/WEB-INF/resources/" />
+<!-- 	<mvc:resources mapping="/static/**" location="/WEB-INF/static/" /> -->
+	<mvc:resources mapping="/resources/**" location="/WEB-INF/web/resources/" />
 
 	<bean id="wroFilter" class="ro.isdc.wro.http.ConfigurableWroFilter">
 		<property name="properties" ref="wroProperties" />

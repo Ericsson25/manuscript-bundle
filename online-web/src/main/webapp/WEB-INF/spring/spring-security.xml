@@ -12,6 +12,7 @@
 			<security:filter-chain pattern="/**/login.html" filters="sessionInvalidation" />
 			<security:filter-chain pattern="/**/loginTemplate.html" filters="none" />
 			<security:filter-chain pattern="/**/registrationTemplate.html" filters="none" />
+			<security:filter-chain pattern="/**/*.html" filters="none" />
 			<security:filter-chain pattern="/**/*.jpg" filters="none" />
 			<!-- Because of angularJS -->
 			<security:filter-chain pattern="/wro/*.js" filters="none" />

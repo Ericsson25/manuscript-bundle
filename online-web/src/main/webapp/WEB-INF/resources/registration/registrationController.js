@@ -1,4 +1,27 @@
-app.controller('registrationController', ['$scope', '$http', '$location', 'preload',
+angular.module('manuscript.registration').controller('RegistrationController', RegistrationController); 
+
+RegistrationController.$inject = ['_','preload', 'RegistrationService'];
+
+function RegistrationController(_, preload, RegistrationService){
+
+	var vm = this;
+	vm.user = {};
+	vm.password = {};
+	vm.academicDisciplines = [];
+
+	vm.preload = preload;
+	vm.registration = registration;
+
+	function registration (){
+		console.log('Hello RegistrationController', vm.user);
+		vm.user = {};
+	};
+	
+};
+
+
+
+/*app.controller('registrationController', ['$scope', '$http', '$location', 'preload',
 	function ($scope, $http, $location, preload) {
 		$scope.registration = {
 			"user": {},
@@ -32,4 +55,4 @@ app.controller('registrationController', ['$scope', '$http', '$location', 'prelo
 				$location.path('/');
 			}
 		}
-	}]);
+	}]);*/
