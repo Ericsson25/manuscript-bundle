@@ -1,0 +1,15 @@
+<div class="author">
+	<div class="wrap">
+		
+		<div class="pageTabs">
+			<uib-tabset active="active" type="pills">
+				<uib-tab index="$index + 1" ng-repeat="tab in vm.tabs" heading="{{tab.title}}">
+					<div ng-include="tab.templateUrl"></div>
+			</uib-tab>
+			</uib-tabset>
+			{{vm.tab}}
+		</div>
+	</div>
+
+	
+</div>

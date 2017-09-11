@@ -1,1 +1,44 @@
-<h1>HELLO</h1>
+<!DOCTYPE html>
+<html ng-app="indexApp">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Manuscript</title>
+	<link rel="stylesheet" href="wro/thirdparty-css.css" />
+<!-- 	<link rel="stylesheet" href="wro/index-css.css" /> -->
+	<link rel="stylesheet" href="wro/frontend-core-style.css" />
+	<link rel="stylesheet" href="resources/css/styles.css"/>
+
+	<script src="wro/thirdparty-js.js" type="text/javascript"></script>
+	<script src="wro/frontend-core.js" type="text/javascript"></script>
+	<script src="wro/index-js.js" type="text/javascript"></script>
+</head>
+
+<body ng-cloak>
+	<header>
+	    <div class="wrap">
+	        <!-- logo -->
+	        <a href="#/"><img class="logo" src="/online-web/resources/pictures/logo.png" /></a>
+	        <!-- navigation menu -->
+	        <nav>
+	            <ul>
+	                <li><a id="authorButton" href="#/author" >Author</a></li>
+	                <li><a id="reviewerButton" href="#/reviewer" >Reviewer</a></li>
+	                <li><a id="editorButton" href="#/editor" >Editor</a></li>
+	                <li><a id="settingsButton" href="#/personaldata" >Settings</a></li>
+	                <li><a id="logoutButton" href="#/logout" >Logout</a></li>
+	                <li style="margin-right:0px">
+	            </ul>
+	        </nav>
+	    </div>
+	</header>
+	<div>
+		<div ng-view></div>
+	</div>
+	
+	<footer>
+<!--     	<div class="copyright"><a href="http://www.script-tutorials.com/" target="_blank">Copyright © 2013 Script Tutorials</a></div> -->
+	</footer>
+</body>
+
+</html>

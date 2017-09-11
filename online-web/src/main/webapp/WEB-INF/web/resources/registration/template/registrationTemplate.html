@@ -1,0 +1,51 @@
+<div>
+	<form name="loginForm" class="registration-form" novalidate>
+		<div class="registration-title">
+			<h1>Registration</h1>
+		</div>
+		<div class="form-group">
+			<forminput label="Title" type="text" input="vm.registrationData.user.title" class="col-xs-4 col-sm-2 col-md-2" style="padding-left: 0px;" required="true"></forminput>
+			<forminput label="First name" type="text" input="vm.registrationData.user.firstName" class="col-xs-4 col-sm-5 col-md-5" required="true"></forminput>
+			<forminput label="Last name" type="text" input="vm.registrationData.user.lastName" class="col-xs-4 col-sm-5 col-md-5" style="padding-right: 0px;" required="true"></forminput>
+		</div>
+
+		<forminput label="Profession / Job" type="text" input="vm.registrationData.user.job" required="true"></forminput>
+		<forminput label="E-mail" type="text" input="vm.registrationData.user.email" required="true"></forminput>
+		<forminput label="User name" type="text" input="vm.registrationData.user.userName" required="true"></forminput>
+		<div class="form-group">
+			<forminput label="Password" type="password" input="vm.registrationData.password.password" class="col-xs-6 col-sm-6 col-md-6" style="padding-left: 0px;" required="true"></forminput>
+			<forminput label="Password again" type="password" input="vm.registrationData.password.passwordAgain" class="col-xs-6 col-sm-6 col-md-6" style="padding-right: 0px;" required="true"></forminput>
+		</div>
+		<div class="form-group">
+			<div class="form-group col-sm-10">
+				<input type="text" ng-model="vm.selectedDisc" placeholder="Academic Disciplines" uib-typeahead="disciplines as disciplines.academicDisciplinesName for disciplines in vm.preload | filter:{academicDisciplinesName:$viewValue} | limitTo:10"
+				 class="form-control" typeahead-show-hint="true" typeahead-min-length="1">
+			</div>
+			<div class="form-group col-sm-2">
+				<button id="academicDisciplonesBtn" class="btn btn-primary btn-block" data-ng-click="vm.addSelectedDisciplines(vm.selectedDisc)"
+				 ng-disabled="vm.selectedDisc == null">Add</button>
+			</div>
+		</div>
+		<div>
+			<table class="table">
+				<tbody data-ng-repeat="item in vm.registrationData.academicDisciplines">
+					<tr>
+						<td>{{item.academicDisciplinesName}}</td>
+						<td align="right">
+							<button id="removeBtn" class="btn btn-xs btn-primary" data-ng-click="vm.removeSelectedDisciplines($index)">
+								Remove
+							</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="form-group col-md-12">
+			<button class="btn btn-primary" type="submit" ng-click="vm.registration(loginForm)" ng-disabled="loginForm.$invalid">Registration</button>
+			<button class="btn btn-primary" ng-click="vm.go('/')">Back</button>
+		</div>
+<pre>{{loginform}}</pre>
+		<messages message="vm.messages" class="custom-error-font-size"></messages>
+	</form>
+</div>

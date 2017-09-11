@@ -26,11 +26,12 @@ public class MainController {
 	@RequestMapping(path = "/index.html")
 	public String getIndex(HttpServletResponse response) {
 		response.setHeader("Cache-Control", "no-cache, no-store, max-age=0, must-revalidate");
-		return "static/index.html";
+		return "resources/index.html";
 	}
 
 	@RequestMapping(path = "/login.html")
-	public String getLoginFromSuccesLogout() {
+	public String getLoginFromSuccesLogout(HttpServletResponse response) {
+		response.setHeader("Cache-Control", "no-cache, no-store, max-age=0, must-revalidate");
 		return "resources/login.html";
 	}
 }

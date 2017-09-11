@@ -1,8 +1,9 @@
 angular.module('loginApp', [
     'ngRoute',
+    'ui.bootstrap',
     'manuscript.frontendcore',
-    'manuscript.login'
-//    'manuscript.registration'
+    'manuscript.login',
+    'manuscript.registration'
 ]).constant('_', window._)
 
 .config(['$routeProvider', '$locationProvider',
@@ -10,7 +11,7 @@ angular.module('loginApp', [
         $locationProvider.hashPrefix('');
 
         $routeProvider.otherwise('/', {
-            templateUrl: 'resources/index.html',
+            templateUrl: 'resources/login.html',
         })
     }
 ]);

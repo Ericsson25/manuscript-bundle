@@ -21,13 +21,27 @@
 		<css>/resources/frontend-core/style/frontend-core.css</css>
 	</group>
 
-	<group name="login-js">
-			
+	<group name="login-js">	
 		<js>/resources/login/module.js</js>
 		<js>/resources/login/LoginService.js</js>
 		<js>/resources/login/LoginController.js</js>
+		
+		<js>/resources/registration/module.js</js>
+		<js>/resources/registration/RegistrationService.js</js>
+		<js>/resources/registration/RegistrationController.js</js>
 
 		<js>/resources/loginApp.js</js>
+	</group>
+	
+	<group name="index-js">
+		<js>/resources/author/module.js</js>
+		<js>/resources/author/AuthorController.js</js>
+		
+		<js>/resources/personaldata/module.js</js>
+		<js>/resources/personaldata/PersonalDataService.js</js>
+		<js>/resources/personaldata/PersonalDataController.js</js>
+		
+		<js>/resources/indexApp.js</js>
 	</group>
 
 	<group name="thirdparty-css">
@@ -38,5 +52,9 @@
 		<css>/resources/css/styles.css</css>
 		<css>/resources/pic.jpg</css>
 		<css>/resources/anastasia-zhenina-65700-background.jpg</css>
+	</group>
+	
+	<group name="index-css">
+		<css>/resources/css/styles.css</css>
 	</group>
 </groups>  
